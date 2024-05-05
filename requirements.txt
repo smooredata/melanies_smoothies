@@ -1,4 +1,12 @@
 # requirements.tx
-snowflake-conncector-python
-snowflake-snowpark-python
-streamlit==1.31.1
+name: app_environment
+channels:
+  - snowflake
+dependencies:
+  - python=3.8.*
+  - snowflake-snowpark-python=
+  - streamlit==1.31.1
+
+# snowflake-conncector-python
+# snowflake-snowpark-python
+
