@@ -1,5 +1,4 @@
-# requirements.tx
-name: app_environment
+# requirements.txt
 channels:
   - snowflake
 dependencies:
