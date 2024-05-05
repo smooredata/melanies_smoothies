@@ -4,19 +4,7 @@ from snowflake.snowpark import Session
 from snowflake.snowpark.functions import col
 import requests
 
-# Configuration for Snowflake session from Streamlit secrets
-connection_parameters = {
-    "account": st.secrets["connections.snowflake"]["account"],
-    "user": st.secrets["connections.snowflake"]["user"],
-    "password": st.secrets["connections.snowflake"]["password"],
-    "role": st.secrets["connections.snowflake"]["role"],
-    "warehouse": st.secrets["connections.snowflake"]["warehouse"],
-    "database": st.secrets["connections.snowflake"]["database"],
-    "schema": st.secrets["connections.snowflake"]["schema"],
-    "client_session_keep_alive": st.secrets["connections.snowflake"]["client_session_keep_alive"]
-}
-
-# Create a session to Snowflake
+connection_parameters = st.secrets["connections.snowflake"]
 session = Session.builder.configs(connection_parameters).create()
 
 # Write directly to the app
