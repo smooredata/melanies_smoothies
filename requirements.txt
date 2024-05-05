@@ -1,5 +1,5 @@
 snowflake-connector-python
-python==3.8.*
+python==3.10.0
 snowflake-snowpark-python==1.15.0
 streamlit==1.31.1
 
